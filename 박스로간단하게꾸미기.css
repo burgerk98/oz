@@ -1,0 +1,38 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+body{
+    display : flex;
+    justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+button{
+    width: 80px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    color: #fed6e3;
+    background-color: #ffffff;
+    
+
+
+    font-size: 17px;
+    
+
+    transition: 1000ms ease background-color,
+    1000ms ease background-color;
+    
+    
+}
+
+button:active{
+    background-color: #a8edea;
+    color: #ffffff;
+    box-shadow: 0px 0px 100px 100px #e2e2dc;
+}
