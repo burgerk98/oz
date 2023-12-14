@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>회원가입</title>
+    <link href="CSS를이용한회원가입폼만들기.css" rel="stylesheet">
+</head>
+<body>
+    <div id="box">
+            <h1>OZ초격차 회원가입</h1>
+            
+        
+        <form id="register-form">
+            <div id="register-form-inner">
+                <label for="id">아이디</label>
+                <input id="id" type="text" name="id">
+                
+                <label for="pw">비밀번호</label>
+                <input id="pw" type="password" name="password">
+            
+                <label for="pw_again">비밀번호 재입력</label>
+                <input id="pw_again" type="password" name="password_again">
+                
+                <label for="name">이름</label>
+                <input id="name" type="text" name="name">
+                
+                <label for="birth">생년월일</label>
+                <section id="birth">
+                        
+                    <input id="birth_yy" type="text" name="birth_yy"
+                    maxlength="4" placeholder="년(4자)">
+                        
+                    <select id="birth_mm" name="birth_mm" size="1">
+                        <option value="title" disabled selected>
+                        월
+                        </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                        
+                        <input id="birth_dd" type="text" name="birth_dd"
+                        maxlength="2" placeholder="일">
+                    
+                    </section>
+
+                <label for="gender">성별</label>
+                <select id="gender" name="gender" size="1">
+                    <option value="title" disabled selected>
+                    성별
+                    </option>
+                    <option value="male">남</option>
+                    <option value="female">여</option>
+                    <option value="none">선택안함</option>
+                </select>
+
+                <label for="email">이메일</label>
+                <input id="email" type="email" name="email">
+
+                <label for="phone">휴대전화</label>
+                <section id="phone_wrap">
+                    <input id="phone" type="tel" name="phone"
+                    placeholder="전화번호 입력.">
+                    <input id="check" type="submit" value="인증번호 받기">
+                </section>
+
+                <section id="code_wrap">
+                    <input id="code" type="tel" name="code"
+                    placeholder="인증번호 입력.">
+                    <input id="check1" type="submit" value="확인">
+                </section>
+                
+                <input id="register" type="submit" value="가입하기">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

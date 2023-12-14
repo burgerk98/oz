@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>OTT플랫폼에 관한 설문</title>
+    </head>
+    <body>
+        <header>
+            <h1>OTT플랫폼에 관한 설문</h1>
+            <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+        </header>
+        <hr>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>개인정보</legend>
+                    <label for="name">이름</label>
+                    <input type="text" 
+                    name="name" 
+                    id="name" placeholder="본명을 입력하세요">
+                    <br>
+                    <label for="email">이메일주소</label>
+                    <input type="email" 
+                    name="email" 
+                    id="email" placeholder="메일을 입력하세요">
+                </fieldset>
+                <fieldset>
+                    <legend>설문</legend>
+                    
+                    <p>어떠한 OTT플랫폼을 사용하시나요?</p>
+                    <input type="checkbox" id="netflix" name="platform">
+                    <label for="netflix">넷플릭스</label>
+                    <input type="checkbox" id="wavve" name="platform">
+                    <label for="wavve">웨이브</label>
+                    <input type="checkbox" id="watcha" name="platform">
+                    <label for="watcha">왓챠</label>
+                    <input type="checkbox" id="tving" name="platform">
+                    <label for="tving">티빙</label>
+                    <input type="checkbox" id="disney+" name="platform">
+                    <label for="disney+">디즈니플러스</label>
+                    <input type="checkbox" id="other" name="platform">
+                    <label for="other">그외</label>
+                    <input type="text"
+                    name="other"
+                    id="other" placeholder="플랫폼을 입력하세요">
+
+                    <p>플랫폼 선택 시 그 기준은 어떻게 되시나요?</p>
+                    <input type="radio" id="price" name="criterion">
+                    <label for="price">합리적인 가격</label>
+                    <input type="radio" id="content" name="criterion">
+                    <label for="content">다양한 콘텐츠</label>
+                    <input type="radio" id="want" name="criterion">
+                    <label for="want">원하는 작품</label>
+                    <input type="radio" id="awareness" name="criterion">
+                    <label for="awareness">인지도</label>
+
+                </fieldset>
+                <fieldset>
+                    <legend>기타 의견</legend>
+                    <textarea rows="3" cols="30" name="comment"></textarea>
+                </fieldset>
+                <input type="submit">
+            </form>
+        </main>
+        <hr>
+        <footer>
+            <p>입력하느라 수고하셨습니다.</p>
+        </footer>    
+    </body>
+</html>
