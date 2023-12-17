@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contenteditable="IE=edge">
+    <title>채팅방 만들기</title>
+    <link href="나만의채팅방만들기.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <main class="chat-screen">
+            <section class="cchat-screen__bar">
+                <div class="user">
+                    <div class="user__column">
+                        <div class="user__pic">
+                            <img src="image/프사.jpeg"
+                            alt="팽도리 프사">
+                        </div>
+                    </div>
+                    <div class="user__column">
+                        <p class="user__nick">팽도리</p>
+                        <p class="user__count">2</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <form class="chat-form">
+            <section class="chat-form__field">
+                <textarea class="chat-form__msg"></textarea>
+                <input type="submit" value="전송" class="chat-form__bt">
+            </section>
+        </form>
+    </div>
+</body>
+</html>
