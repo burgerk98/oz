@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+
+html{
+    
+}
+
+body{
+    background-color: #d0e3ff;
+
+    display : flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+    flex-direction: column;
+
+ 
+}
+
+.face{
+    width: 60px;
+    height: 50px;
+    position: relative;
+    top: 35px;
+    
+}
+
+    .eye{
+        background-color: #000000;
+        border-radius: 7px;
+        width: 14px;
+        height: 14px;
+        position: relative;
+        
+
+    }
+
+
+    .eye:nth-child(1){float: left;}
+    .eye:nth-child(2){float: right;}
+
+
+    .mouth{
+        background-color: #eeab73;
+        border-radius: 0 0 0 7px;
+        width: 25px;
+        height: 10px;
+        position: absolute;
+        top: 15px;
+        left: 6px;
+        
+    }
+
+
+.hat{
+    position: relative;
+    top: 75px;
+    left: 10px;
+    z-index: 3;
+    transform: rotate(10deg);
+}
+
+    .hat1{
+        background-color: #000000;
+            border-radius: 7px 7px 0 0;
+            width: 60px;
+            height: 60px;
+            
+    }
+
+    .hat2{
+        background-color: #000000;
+            border-radius: 0 0 7px 7px;
+            width: 100px;
+            height: 10px;
+            
+    }
+
+.arms{
+    position: relative;
+    z-index: 1;
+}
+    .arm1{
+        background-color: #8d765a;
+            border-radius: 2px 2px 0 0;
+            width: 3px;
+            height: 60px;
+            transform: rotate(-59deg);
+            position: relative;
+            right: 20px;
+            bottom: 10px;
+    }
+
+    .arm2{
+        background-color: #8d765a;
+            border-radius: 2px 2px 0 0;
+            width: 3px;
+            height: 60px;
+            transform: rotate(59deg);
+            position: relative;
+            left: 20px;
+            bottom: 10px;
+            
+    }
+    .arm1:nth-child(1){float: left;}
+    .arm2:nth-child(2){float: right;}
+
+.cloth{
+    width: 100px;
+    height: 68px;
+    position: relative;
+    top: 31px;
+    
+}
+    .button{
+        background-color: #000000;
+        border-radius: 8px;
+        width: 16px;
+        height: 16px;
+        margin-bottom: 10px;
+        
+    }
+
+.snow1{
+    background:linear-gradient(190deg, #ecebeb, #ffffff);
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 60px;
+    z-index: 2;
+}
+.snow2{
+    background:linear-gradient(180deg, #ecebeb, #ffffff);
+    border-radius: 65px;
+    width: 130px;
+    height: 130px;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+}
+.snow3{
+    background:linear-gradient(180deg, #ecebeb, #ffffff);
+    border-radius: 75px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    
+}
+
