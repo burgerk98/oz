@@ -1,0 +1,66 @@
+.menu ::before{
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    float: left;
+    clear: left;
+}
+.menu label::before{ content: '\e5d2'; }
+.menu li:nth-child(1) a::before{ content: '\e88a'; }
+.menu li:nth-child(2) a::before{ content: '\f05d'; }
+.menu li:nth-child(3) a::before{ content: '\e87d'; }
+.menu li:nth-child(4) a::before{ content: '\f0e2'; }
+
+#expand-menu{
+    display: none;
+}
+#expand-menu:checked~ul{
+    display: block;
+    height: auto;
+}
+
+.menu{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu a, .menu>label{
+    display: block;
+    height: 60px;
+    padding: 18px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    
+}
+.menu a:hover{
+    color: #000;
+}
+.menu ul li:hover, .menu>label:hover{
+    background-color: #fff;
+    color: #000;
+}
+.menu div{
+    line-height: 1.7;
+    font-size: 1rem;
+    padding: 0 0 0 40px;
+}
+@media screen and (max-width:550px) {
+    .menu #expand-menu:not(:checked) ~ ul { /* 2단계 */
+        display: none;
+    }
+}
+
+@media screen and (min-width:550px) {
+    .menu{ /* 2단계 */
+        display: none;
+    
+}
+}

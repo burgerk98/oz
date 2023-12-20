@@ -1,0 +1,30 @@
+#nav{
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #000;
+    color: #fff;
+}
+
+.header-content__nav{
+    justify-content: center;
+}
+
+.content__nav{
+    margin: 0 1rem;
+    padding-left: 40px;
+    list-style: none;
+}
+
+.content__nav li{
+    display: inline;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:550px) {
+    #nav{
+        display: none;
+    }
+}

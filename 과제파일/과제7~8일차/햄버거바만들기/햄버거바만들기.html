@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="햄버거바만들기.css" rel="stylesheet">
+    <link href="햄버거바만들기1.css" rel="stylesheet">
+    <title>햄버거바 만들기</title>  
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 16px;
+        }
+
+        .flex{ display: flex;}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header class="header">
+            <nav id="nav">
+                <div class="header-content__nav flex">
+                    <ul class="content__nav">
+                        <li>홈</li>
+                        <li>소개</li>
+                        <li>서비스</li>
+                        <li>문의</li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="menu">
+                <label for="expand-menu"><div>메뉴</div></label>
+                <input type="checkbox" id="expand-menu" name="expand-menu">
+                <ul>
+                    <li><a href="#" class="item"><div>홈</div></a></li>
+                    <li><a href="#" class="item"><div>소개</div></a></li>
+                    <li><a href="#" class="item"><div>서비스</div></a></li>
+                    <li><a href="#" class="item"><div>문의</div></a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
