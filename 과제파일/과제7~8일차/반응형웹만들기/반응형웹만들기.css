@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4a707a;
+}
+
+p{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 40px;
+    color: #ddddda;
+    display: none;
+}
+
+
+@media screen and (min-width: 1301px) {
+    body{
+        background-color: #4a707a;
+        transition: 1s ease;
+    }
+    #a{
+        display: block;
+       
+    }
+}
+
+
+@media screen and (max-width: 1300px) and (min-width: 1001px) {
+    body{
+        background-color: #7697a0;
+        transition: 1s ease;
+    }
+    #b{
+        display: block;
+        
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 701px){
+    body{
+        background-color: #94b0b7;
+        transition: 1s ease;
+    }
+    #c{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    body{
+        background-color: #c2c8c5;
+        transition: 1s ease;
+    }
+    #d{
+        display: block;
+    }
+
+} 
+
+/* ㅠㅠ 왜 width가 500px 이하로는 안가는거쥬?
