@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 - 성적표</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        const div = document.getElementById("container")
+
+        const score = parseInt(prompt("중간고사 점수를 입력하세요."))
+
+        if(score >= 90){
+            div.textContent = `나의 기말고사 점수는 ${score}점, 학점은 A!!!`
+        } else if(score >= 80){
+            div.textContent = `나의 기말고사 점수는 ${score}점, 학점은 B!!!`
+        } else if(score >= 70){
+            div.textContent = `나의 기말고사 점수는 ${score}점, 학점은 C!!!`
+        } else if(score >= 60){
+            div.textContent = `나의 기말고사 점수는 ${score}점, 학점은 D!!!`
+        } else if(score >=0){
+            div.textContent = `나의 기말고사 점수는 ${score}점, 학점은 F!!!`
+        } else{
+            alert("점수를 다시 확인해주세요!")
+        }
+    </script>
+</body>
+</html>

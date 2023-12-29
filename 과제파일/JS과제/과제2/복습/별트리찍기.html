@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>별 트리 찍기</h1>
+
+    <script>
+
+        document.write(`<p>1번 별<p>`)
+        for(let line = 1; line <= 5; line++){
+            for(let star = 1; star <= line ; star++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        document.write(`<p>2번 별<p>`)
+        for(let line = 1; line <= 5; line++){
+            for(let stars = 1; stars <= line; stars++){
+            document.write("*")
+            }
+            document.write("<br>")
+        }
+        for(let line =1; line <= 5; line++){
+            for(let stars = 5; stars >= line; stars--){
+                document.write("*")
+            }
+            document.write("<br>")
+            
+        }
+
+        document.write(`<p>3번 별<p>`)
+        for(let line = 1; line <= 5; line++){
+            for(let blank = 1; blank<= 5-line; blank++){
+                document.write("&nbsp;")
+            } for(let star = 1; star <= line*2-1; star++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        for(let line = 1; line <= 5; line++){
+            for(let blank = 7; blank >= 7-line; blank--){
+                document.write("&nbsp;")
+            } for(let star = 7; star >= line*2-1; star--){
+                document.write("*")
+            }
+            document.write("<br>")
+            
+        }
+    </script>
+</body>
+</html>
