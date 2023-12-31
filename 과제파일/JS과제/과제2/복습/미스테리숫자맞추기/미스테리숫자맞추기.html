@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미스테리 숫자 맞추기</title>
+    <link href="미스테리숫자맞추기.css" rel="stylesheet">
+    <style>
+
+        #retry{
+            display: none;
+        }
+    </style>
+</head>
+        
+<body>
+    <div id="container">
+        <h1>Mystery Number 맞추기</h1>
+        <h4>1부터 100사이의 숫자를 입력하세요!</h4>
+
+        <div id="blank">
+            <input id="number" name="number" type="text" autocomplete="off">
+            <button id="game" onclick="game()">뚜둥!</button>
+        </div>
+
+        <p id="hint"></p>
+        <button id="retry" onclick="go()">
+            <span class="wave"></span>
+            다시하기</button>
+    </div>
+
+    <script>
+        let random = Math.random()
+        const MAX_NUM = 100
+        const MIN_NUM = 1
+    
+        let rn = Math.floor(Math.random() * MAX_NUM) + MIN_NUM
+    
+        console.log(rn)
+        
+        const btn = document.getElementById("retry")
+        const p = document.getElementById("hint")
+        function game(){
+            let num = parseInt(document.getElementById("number").value)
+            
+            if(num === rn){
+                alert("맞았슈")
+                p.textContent = ""
+                btn.style.display = 'block'
+            }else if(num > rn){
+                p.textContent = "숫자가 커요! 줄여볼까요?"
+            }else if(num < rn ){
+                p.textContent = "숫자가 너무 작아요! 조금 더 높여보세요!"
+            }else{
+                p.textContent = "숫자를 입력하세요!"
+            }
+        }
+
+        function go(){
+            location.reload()
+        }
+    </script>
+</body>
+</html>

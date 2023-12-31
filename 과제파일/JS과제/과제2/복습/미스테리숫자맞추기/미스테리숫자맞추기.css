@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #a5cad2;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: #758eb7;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+#blank{
+    padding: 10px;
+    margin: 10px;
+}
+input {
+    height: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #f7f8f0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    color: #758eb7;
+
+    transition: 500ms ease border-color;
+}
+input:focus {
+    outline: none;
+}
+
+input:active {
+    
+    border: 3px solid #a5cad2;
+}
+
+#game{
+    margin-left: 5px;
+    padding: 0 8px 0 8px;
+    height: 30px;
+    width: 70px;
+    border: 2px solid #f7f8f0;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #a5cad2;
+    color: #f7f8f0;
+    font-size: 15px;
+
+    transition: 500ms ease background-color;
+}
+#game:active {
+    
+    background-color: #f7f8f0;
+    color: #758eb7;
+}
+
+#retry{
+    margin-top: 15px;
+    height: 40px;
+    width: 100px;
+    border: 2px solid rgba(117, 142, 183, .5);
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #a5cad2;
+    color: #758eb7;
+    font-size: 15px;
+    position: relative;
+    
+    transition: 500ms ease border;
+    }
+
+    #retry:active {
+        border: 2px solid rgba(117, 142, 183, 1);
+    }
+
+.wave {
+    opacity: .5;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    background: #758eb7;
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-bottom: -301px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    
+    transition-duration: 2s;
+    transition-property: margin-bottom;
+    transition-timing-function: ease-in-out;
+  }
+  
+  button:hover .wave {
+    margin-bottom: -265px;
+    animation: rotate 3000ms infinite linear;
+  }
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+  }
