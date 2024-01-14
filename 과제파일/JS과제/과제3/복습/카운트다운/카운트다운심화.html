@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>today date</title>
+</head>
+  
+<body>
+  <h1 id="now"></h1>
+  <h1 id="left"></h1>
+  <script>
+    // const now = document.getElementById('now');
+    // const left = document.getElementById('left');
+
+    // const nowtime = new Date();
+    // now.innerHTML = `현재 날짜와 시간: ${nowtime}`
+
+    // const future = new Date(24, 11, 31, 59, 59).getTime();
+    // const nowT = new Date().getTime();
+    // console.log(future-nowT)
+
+    // let days, hours, minutes, seconds;
+
+    // function countdown(){
+
+    //   var interval = setInterval(function(){
+        
+    //   })
+    // }
+    
+    const now = document.getElementById('now');
+
+    var interval = setInterval(function () {
+      var nowtime = new Date();
+      now.innerHTML = `현재 날짜와 시간: ${nowtime}`;
+    }, 1000);
+
+
+
+    var left = document.getElementById('left')
+    var days, hours, minutes, seconds;
+
+    
+
+    function getCountdown(){
+      var nowT = new Date().getTime();
+      var targetT = new Date(2024,11,31,59,59).getTime();
+      
+      var leftT = (targetT - nowT) / 1000;
+
+      days = parseInt(leftT / 86400);
+      leftT = leftT % 86400;
+
+      hours = parseInt(leftT / 3600);
+      leftT = leftT % 3600;
+
+      minutes = parseInt(leftT /60);
+      seconds = parseInt(leftT % 60);
+
+      left.innerHTML = `올해의 남은 시간: ${days}일 ${hours}시간 ${minutes}분 ${seconds}초 남았습니다.`
+    }
+
+    var interval = setInterval(function () {getCountdown();}, 1000);
+
+  </script>
+</body>
+</html>
