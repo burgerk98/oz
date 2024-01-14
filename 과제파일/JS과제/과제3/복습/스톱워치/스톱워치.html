@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스톱워치</title>
+</head>
+<body>
+  <h1>⏱️스톱워치⏱️</h1>
+
+  <p id="time"></p>
+
+  <button id="start" onclick="start()">시작</button>
+  <button id="stop" onclick="stop()">중지</button>
+
+  <script>
+    var time = document.getElementById('time')
+    //외부에서 선언하는 이유를 잘 이해하지못했다. 다시 찾아보기!
+    var startT;
+    var stopwatch;
+
+    //스타트 버튼을 클릭하면 현재시각과 함께 스톱워치가 실행
+    function start(){
+      //시작 시 시간 기록
+      startT = new Date().getTime();
+      stopwatch = setInterval(function(){updateT()},1)
+    }
+
+
+    function updateT(){
+      //셋인터벌을 통해 계속 업데이트 되는 시간
+      var nowT = new Date().getTime();
+      //흐르는 시간에 멈춰있는 시간을 뺀다.
+      var timer = new Date(nowT - startT);
+
+      //처음에 new Date(timer).getMinutes()로 작성하여 실행되지않았다.
+      //위에서 new Date에 관한것을 timer로 호출해줬기때문에 timer이라고 작성하는것이 맞다.
+      var min = pad(timer.getMinutes());
+      var sec = pad(timer.getSeconds());
+      var millisec = pad(Math.floor(timer.getMilliseconds() / 10));
+      //하나하나 나누기 사용해야하는줄 알고 놀랐는데 date메서드가 따로있다는 것을 알게되었다.
+      
+      time.innerHTML = `경과 시간: ${min}:${sec}:${millisec}`;
+    }
+    
+    //자릿수 채워주기!
+    function pad(n) {
+      return (n < 10 ? '0' : '') + n;
+    }
+
+    //setInterval을 사용한 updateT함수 호출 중지
+    function stop() {
+      clearInterval(stopwatch);
+    }
+  </script>
+</body>
+</html>

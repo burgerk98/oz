@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>심화스톱워치</title>
+</head>
+<body>
+  <h1>⏱️스톱워치⏱️</h1>
+
+  <p id="time">경과 시간: 00:00:00</p>
+  <button id="start" onclick="start()">시작</button>
+  <button id="stop" onclick="stop()">멈춤</button>
+  <button id="reset" onclick="reset()">지우기</button>
+
+  <script>
+    //this....어려운것..
+    //일시정지부분 다시 이해하기!
+
+    var time = document.getElementById('time');
+    var startT;
+    //경과한 시간을 저장할 변수
+    var pasedT = 0;
+    var stopwatch;
+    
+
+    function start(){
+      // 스톱워치가 멈춰있는 경우에만 시작
+      if (!stopwatch) { 
+      startT = new Date().getTime() - pasedT;
+      //10ms로 설정하는게 기본이라고 한다.
+      stopwatch = setInterval(function(){setT()},10)
+      }
+      
+    }
+
+    function setT(){
+      var nowT = new Date().getTime();
+      pasedT = nowT - startT;
+
+      newT = new Date(pasedT);
+
+      var min = pad(newT.getMinutes());
+      var sec = pad(newT.getSeconds());
+      var millisec = pad(Math.floor(newT.getMilliseconds() / 10));
+
+      time.innerHTML = `경과 시간: ${min}:${sec}:${millisec} `
+      
+    }
+
+    
+
+    function pad(n){
+      return (n < 10 ? '0' : '') +n;
+    } 
+
+    function stop(){
+      clearInterval(stopwatch);
+      stopwatch = null;
+    }
+
+    function reset(){
+      clearInterval(stopwatch);
+      stopwatch = null;
+      //경과한시간을 0으로 변경해주기
+      pasedT = 0;
+      time.innerHTML = '경과 시간: 00:00:00';
+
+    }
+
+  </script>
+</body>
+</html>
